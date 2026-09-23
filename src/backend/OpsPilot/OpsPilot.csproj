@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="OpsPilot.Api\Controllers\" />
+    <Folder Include="OpsPilot.Api\Hubs\" />
+    <Folder Include="OpsPilot.Api\Middleware\" />
+    <Folder Include="OpsPilot.Api\Authorization\" />
+    <Folder Include="OpsPilot.Application\Applications\" />
+    <Folder Include="OpsPilot.Application\Monitoring\" />
+    <Folder Include="OpsPilot.Application\Deployments\" />
+    <Folder Include="OpsPilot.Application\Alerts\" />
+    <Folder Include="OpsPilot.Application\Common\" />
+    <Folder Include="OpsPilot.Application\Servers\" />
+    <Folder Include="OpsPilot.Application\Projects\" />
+    <Folder Include="OpsPilot.Domain\Entities\Identity\" />
+    <Folder Include="OpsPilot.Domain\Enums\" />
+    <Folder Include="OpsPilot.Domain\Events\" />
+    <Folder Include="OpsPilot.Domain\Services\" />
+    <Folder Include="OpsPilot.Infrastructure\Integrations\" />
+    <Folder Include="OpsPilot.Infrastructure\Security\" />
+    <Folder Include="OpsPilot.Infrastructure\Repositories\" />
+    <Folder Include="OpsPilot.Infrastructure\Persistence\Configurations\" />
+    <Folder Include="OpsPilot.Infrastructure\Persistence\Migrations\" />
+    <Folder Include="OpsPilot.Tests\IntegrationTests\" />
+    <Folder Include="OpsPilot.Tests\UnitTests\" />
+    <Folder Include="OpsPilot.Worker\HealthChecks\" />
+    <Folder Include="OpsPilot.Worker\Metrics\" />
+    <Folder Include="OpsPilot.Worker\AlertEvaluation\" />
+  </ItemGroup>
+
+</Project>
