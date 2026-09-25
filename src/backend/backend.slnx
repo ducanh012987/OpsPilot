@@ -1,3 +1,8 @@
 <Solution>
-  <Project Path="OpsPilot/OpsPilot.csproj" />
+  <Project Path="OpsPilot.Application/OpsPilot.Application.csproj" Id="2bf7128b-b24e-40c1-b7d3-5904fb561a87" />
+  <Project Path="OpsPilot.Domain/OpsPilot.Domain.csproj" Id="c7210e77-9b81-4c25-b8dd-357f7fd2dfb0" />
+  <Project Path="OpsPilot.Infrastructure/OpsPilot.Infrastructure.csproj" Id="54955fe0-0bad-4b30-99a7-4923339e86d7" />
+  <Project Path="OpsPilot.Tests/OpsPilot.Tests.csproj" Id="27abc2b6-3769-41a5-b09b-4ac305f572ec" />
+  <Project Path="OpsPilot.Worker/OpsPilot.Worker.csproj" Id="a5c7a88d-b670-4cd3-a500-854f7529dddb" />
+  <Project Path="OpsPilot/OpsPilot.Api.csproj" />
 </Solution>

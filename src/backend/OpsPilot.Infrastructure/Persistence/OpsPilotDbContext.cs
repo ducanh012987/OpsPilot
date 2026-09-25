@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OpsPilot.OpsPilot.Domain.Entities.Projects;
 
 namespace OpsPilot.OpsPilot.Infrastructure.Persistence
 {
@@ -20,5 +21,7 @@ namespace OpsPilot.OpsPilot.Infrastructure.Persistence
         {
             return base.SaveChanges();
         }
+
+        public DbSet<Project> Projects => Set<Project>();
     }
 }
