@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using OpsPilot.Domain.Entities.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OpsPilot.OpsPilot.Domain.Entities.Projects
@@ -22,5 +23,13 @@ namespace OpsPilot.OpsPilot.Domain.Entities.Projects
 
         [Column("DESCRIPTION")]
         public string? Description { get; set; }
+
+        [Column("OWNER_ID")]
+        public Guid OwnerId { get; set; }
+
+        public User Owner { get; set; } = null!;
+
+        public ICollection<ProjectMember> Members { get; set; }
+            = new List<ProjectMember>();
     }
 }

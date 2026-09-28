@@ -1,13 +1,22 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OpsPilot.OpsPilot.Domain.Entities
+namespace OpsPilot.Domain.Entities.Identity
 {
-    public class BaseEntity : IBaseEntity
+    [Table("USER")]
+    public class User : IdentityUser<Guid>
     {
+        [Column("FULL_NAME")]
+        [StringLength(200)]
+        public string FullName { get; set; } = string.Empty;
+
         [Column("IS_ACTIVE")]
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
+
+        [Column("LAST_LOGIN_AT")]
+        public DateTime? LastLoginAt { get; set; }
 
         [Column("CREATE_BY")]
         [StringLength(50)]

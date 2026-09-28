@@ -8,12 +8,16 @@
 
   <ItemGroup>
     <Folder Include="Alerts\" />
-    <Folder Include="Applications\" />
     <Folder Include="Common\" />
     <Folder Include="Deployments\" />
     <Folder Include="Monitoring\" />
     <Folder Include="Projects\" />
     <Folder Include="Servers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OpsPilot.Domain\OpsPilot.Domain.csproj" />
+    <ProjectReference Include="..\OpsPilot.Infrastructure\OpsPilot.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,14 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OpsPilot.OpsPilot.Domain.Entities
+namespace OpsPilot.Domain.Entities.Identity
 {
-    public class BaseEntity : IBaseEntity
+    [Table("ROLE")]
+    public class Role : IdentityRole<Guid>
     {
-        [Column("IS_ACTIVE")]
-        public bool? IsActive { get; set; }
-
         [Column("CREATE_BY")]
         [StringLength(50)]
         [Unicode(false)]
